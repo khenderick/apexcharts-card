@@ -323,6 +323,7 @@ export function myFormatNumber(
     }
   }
   return formatNumber(lValue, localeOptions, {
+    minimumFractionDigits: precision === undefined ? 0 : precision,
     maximumFractionDigits: precision === undefined ? DEFAULT_FLOAT_PRECISION : precision,
   });
 }
